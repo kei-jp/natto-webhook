@@ -10,17 +10,18 @@ app.use(bodyParser.json());
 app.post('/todoist', (req, res) => {
   const { task_name, section_name, tags } = req.body;
 
-  console.log('Žó‚¯Žæ‚Á‚½ƒ^ƒXƒN:', { task_name, section_name, tags });
+  console.log('å—ã‘å–ã£ãŸã‚¿ã‚¹ã‚¯:', { task_name, section_name, tags });
 
-  // TODO: Todoist API ‚Åƒ^ƒXƒN“o˜^ˆ—‚ð‘‚­
+  // TODO: Todoist API ã§ã‚¿ã‚¹ã‚¯ç™»éŒ²å‡¦ç†ã‚’æ›¸ã
 
-  res.status(200).send({ message: 'WebhookŽóM¬Œ÷I' });
+  res.status(200).send({ message: 'Webhookå—ä¿¡æˆåŠŸï¼' });
 });
 
 app.get('/', (req, res) => {
-  res.send('”[“¤‚ª‹©‚Î‚ê‚µ–¢—ˆ‚Ì“üŒû‚¾‚æ');
+  res.set('Content-Type', 'text/plain; charset=utf-8');
+  res.send('ç´è±†ãŒå«ã°ã‚Œã—æœªæ¥ã®å…¥å£ã ã‚ˆ');
 });
 
 app.listen(PORT, () => {
-  console.log(`ƒT[ƒo[‹N“®’†: http://localhost:${PORT}`);
+  console.log(`ã‚µãƒ¼ãƒãƒ¼èµ·å‹•ä¸­: http://localhost:${PORT}`);
 });
