@@ -19,7 +19,7 @@ app.post('/todoist', (req, res) => {
 
 app.get('/', (req, res) => {
   res.set('Content-Type', 'text/plain; charset=utf-8');
-  res.send('納豆が叫ばれし未来の入口だよ');
+  res.send('しばかれて納豆が叫く未来の入口だよ');
 });
 
 app.listen(PORT, () => {
