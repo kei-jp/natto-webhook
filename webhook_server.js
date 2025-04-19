@@ -75,7 +75,7 @@ app.post('/todoist', async (req, res) => {
 		section_id = await getObjectID('sections', section_name);
 
 		if (source === 'siri') {
-			const tasks = task_name.split(' ');
+			const tasks = task_name.split(/\t| /);
 			for (const name of tasks) {
 				if (name.trim()) {
 					await registTask(project_id, section_id, name.trim(), tags);
