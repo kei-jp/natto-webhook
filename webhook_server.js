@@ -43,10 +43,10 @@ app.post('/todoist', async (req, res) => {
 		);
 
 		console.log('✅ タスク登録成功:', response.data);
-		res.status(200).send({ message: 'タスク登録完了！' });
+		res.status(200).send({ message: '🎉タスク登録完了！' });
 	} catch (error) {
 		console.error('❌ タスク登録失敗:', error.response?.data || error.message);
-		res.status(500).send({ error: `タスク登録に失敗しました メッセージ詳細:${error.response.data}` });
+		res.status(500).send({ message: `☠️タスク登録に失敗しました:${error.message}` });
 	}
 });
 
